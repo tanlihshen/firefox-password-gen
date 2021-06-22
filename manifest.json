@@ -1,0 +1,33 @@
+{
+
+    "manifest_version": 2,
+    "name": "PasswordGen",
+    "version": "1.0",
+  
+    "description": "A simple popup that allows you to randomly generate a password with the length and condition of your own choice.",
+    "icons": {
+      "48": "icons/spgicon.png"
+    },
+  
+    "browser_action": {
+      "default_icon": "icons/spgicon.png",
+      "default_title": "PasswordGen",
+      "default_popup": "popup/passwordgen.html"
+    },
+
+    "options_ui": {
+      "page": "options.html"
+    },
+
+    "permissions": [
+      "activeTab",
+      "storage"
+    ],
+
+    "browser_specific_settings": {
+      "gecko": {
+        "id": "{58EAC91F-2DCE-456A-85A6-20E15AD9A21B}"
+      }
+    }
+  
+  }
