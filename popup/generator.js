@@ -58,30 +58,7 @@ function quickgen(){
 
 // Generate a normal password depending on length, refer to charset for characters that're included.
 function genpass() {
-  document.getElementById("genpass_output").innerHTML = generatePassword();
-}
-
-function custom_pass_gen(){
-
-  var input = document.getElementById("genpass_custom_input").value;  
-
-  // remove all whitespace
-  input = input.replace(/\s+/g, '');
-
-  var length = input.length;
-
-  if(input < 1 || ""){
-    document.getElementById("genpass_custom_output").innerHTML = "Value is empty";
-  }else{
-    var randompass = quickgen();
-    var randnum = Math.floor(Math.random() * length)+1;
-    var firsthalf = randompass.slice(0, randnum);
-    var secondhalf = randompass.slice(randnum, length);
-
-    document.getElementById("genpass_custom_output").innerHTML = firsthalf + input + secondhalf;
-
-  }
-  
+  document.getElementById("genpass_output").innerText = generatePassword();
 }
 
 //Show help
@@ -89,19 +66,19 @@ var status = "less";
 
 function show_help(){
 
-  var text='<div class="help_box">'+
-          '<ul>'+
-          '<li>The generate a password feature will generate a password for you based on the password length that you have entered.</li>'+
-          '<li>Exclude conditions will remove symbols, numbers, and or both from the generated password.</li>'+
-          '</ul>'+
-          '</div>';
+  // var text='<div class="help_box">'+
+  //         '<ul>'+
+  //         '<li>The generate a password feature will generate a password for you based on the password length that you have entered.</li>'+
+  //         '<li>Exclude conditions will remove symbols, numbers, and or both from the generated password.</li>'+
+  //         '</ul>'+
+  //         '</div>';
 
   if (status == "less") {
-      document.getElementById("help_1").innerHTML=text;
+      document.getElementById("help_1").innerText="The generate a password feature will generate a password for you based on the password length that you have entered. Exclude conditions will remove symbols, numbers, and or both from the generated password.";
       document.getElementById("moreBtn").innerText = "Close Guide";
       status = "more";
   } else if (status == "more") {
-      document.getElementById("help_1").innerHTML = "";
+      document.getElementById("help_1").innerText = "";
       document.getElementById("moreBtn").innerText = "Read Guide";
       status = "less"
   }

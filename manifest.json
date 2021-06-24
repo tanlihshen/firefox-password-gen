@@ -1,12 +1,12 @@
 {
 
     "manifest_version": 2,
-    "name": "PasswordGen",
+    "name": "Simple Password Generator",
     "version": "1.0",
   
     "description": "A simple popup that allows you to randomly generate a password with the length and condition of your own choice.",
     "icons": {
-      "48": "icons/spgicon.png"
+      "48": "icons/spgicon-48.png"
     },
   
     "browser_action": {
